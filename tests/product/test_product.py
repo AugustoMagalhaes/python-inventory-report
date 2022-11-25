@@ -9,8 +9,7 @@ def test_cria_produto():
       "24/11/2022",
       "23/05/2024",
       "CDB00001C",
-      "De preferências em um serviço de nuvem com três zonas " +
-      "de disponibilidade"
+      "De preferências em um serviço de nuvem"
     ))
 
     assert cdb.id == 1
@@ -20,5 +19,5 @@ def test_cria_produto():
     assert cdb.data_de_validade == "23/05/2024"
     assert cdb.numero_de_serie == "CDB00001C"
     assert cdb.instrucoes_de_armazenamento == (
-     "De preferências em um serviço de nuvem com três zonas de disponibilidade"
+     "De preferências em um serviço de nuvem"
      )
