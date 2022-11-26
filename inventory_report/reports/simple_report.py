@@ -14,15 +14,19 @@ class SimpleReport:
         return min(list(filtro))
 
     @staticmethod
-    def empresa_com_mais_produtos(lista):
-        todas_empresas = {}
+    def produtos_por_empresa(lista):
+        estoque_empresa = {}
         for dado in lista:
             nome_empresa = dado["nome_da_empresa"]
-            if nome_empresa in todas_empresas.keys():
-                todas_empresas[nome_empresa] += 1
+            if nome_empresa in estoque_empresa.keys():
+                estoque_empresa[nome_empresa] += 1
             else:
-                todas_empresas[nome_empresa] = 1
-        return max(todas_empresas, key=todas_empresas.get)
+                estoque_empresa[nome_empresa] = 1
+        return estoque_empresa
+
+    def empresa_com_mais_produtos(lista):
+        produts = SimpleReport.produtos_por_empresa(lista)
+        return max(produts, key=produts.get)
 
     @staticmethod
     def generate(lista):
