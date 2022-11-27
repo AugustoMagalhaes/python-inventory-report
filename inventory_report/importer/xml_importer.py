@@ -8,7 +8,6 @@ class XmlImporter(Importer):
     @staticmethod
     def import_data(path):
         extensao = path.split(".")[1]
-        print("exts: ", extensao)
         if extensao == "xml":
             arquivo = Inventory.le_arquivo(path)
             return arquivo

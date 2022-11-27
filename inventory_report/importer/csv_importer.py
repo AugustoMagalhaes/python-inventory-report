@@ -7,7 +7,6 @@ class CsvImporter(Importer):
     @staticmethod
     def import_data(path):
         extensao = path.split(".")[1]
-        print("exts: ", extensao)
         if extensao == "csv":
             return Inventory.le_arquivo(path)
         else:
