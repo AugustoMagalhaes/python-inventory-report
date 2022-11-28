@@ -9,7 +9,7 @@ class CompleteReport(SimpleReport):
         empresa_produtos = ""
         for entry in entries:
             empresa_produtos += "- " + entry[0] + ": " + str(entry[1]) + "\n"
-        print("resultado: ", empresa_produtos)
+
         return empresa_produtos
 
     @staticmethod

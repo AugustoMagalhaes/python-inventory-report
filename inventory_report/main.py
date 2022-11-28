@@ -27,10 +27,10 @@ def main():
         sys.stderr.write("Verifique os argumentos\n")
     else:
         args_validos = get_args()
-
         path, tipo_relatorio = args_validos
+
         extensao = path.split('.')[1]
         inventory_refactor = InventoryRefactor(get_importer(extensao))
-
         relatorio = inventory_refactor.import_data(path, tipo_relatorio)
+
         print(relatorio, end="")
